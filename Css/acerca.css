@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'Roboto';
+}
+
+
+.menu-container{
+    display: flex;
+    justify-content: space-between;
+    margin: 40px;
+}
+
+.logo::first-letter{
+    color: cornflowerblue;
+}
+
+.menu{
+    list-style: none;
+    display: flex;
+}
+
+.toggle{
+    display: none;    
+}
+
+.menu li a{
+    text-decoration: none;
+    margin-right: 40px;
+    color: black;
+}
+
+.menu li a:hover{
+    background-color: cornflowerblue;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    transition: all .3s;
+}
+main{
+    margin:  0 auto;
+    margin-top: 200px;
+    width: 50%;
+    text-align: center;
+}
+
+.main-animation{
+    width: 100%;
+    
+}
+
+h2 span{
+    background-color: white;
+    position: absolute;
+    right: 0;
+    width: 0;
+    border-left: 1px solid #000;
+
+    animation: animacion 8s infinite alternate;
+}
+
+.main-contenido{
+    display: flex;
+    flex-direction: row;
+    width: 50%;
+    margin: 0 auto;
+    margin-top: 200px;
+    gap: 40px;
+    height: 50vh;
+}
+
+.main-contenido p{
+    margin-top: 40px;
+}
+.main-contenido img{
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+}
+
+@keyframes animacion {
+    from{
+        width: 100%;
+    }
+    to{
+        width: 0;
+    }
+    
+}
+
+@media screen and  (max-width:700px) {
+    .toggle{
+        display: block;
+        font-size: 20px;
+        background: none;
+        border: none;
+        cursor: pointer;
+    }
+    .menu{
+        top: 80px;
+        display: flex;
+        flex-direction: column;
+        position: fixed;
+        text-align: center;
+        width: 100%;
+        line-height: 5rem;
+        left: 100%;
+        transition: all .8s;
+    }
+
+    .active{
+        left: 0;
+    }
+    main{
+        margin:  0 auto;
+        margin-top: 500px;
+        width: 50%;
+        text-align: center;
+    }
+    
+    .main-animation{
+        width: 300px;
+    }
+    .main-contenido{
+        display: flex;
+        flex-direction: column;
+        width: 50%;
+        margin: 0 auto;
+        margin-top: 100px;
+        gap: 40px;
+        height: 70vh;
+        align-items: center;
+        text-align: center;
+    }
+
+    
+
+    
+
+    .main-contenido img{
+        height: 150px;
+        width: 150px;
+        border-radius: 1px;
+    }
+}
